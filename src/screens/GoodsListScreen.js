@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
 import HeaderScreen from '../components/Header';
 import SearchFilter from '../components/SearchFilter';
@@ -7,6 +7,7 @@ import CategoriesList from '../components/CategoriesList';
 import GoodCard from '../components/GoodCard';
 
 const GoodsListScreen = () => {
+    const [searchValue, setSearchValue] = useState('');
     return (
         <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
             <HeaderScreen headerText={"Рады видеть тебя!"} headerIcon={"bell-o"}/>
