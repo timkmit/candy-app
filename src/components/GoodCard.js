@@ -6,6 +6,7 @@ const GoodCard = () => {
     return (
         <View>
             <FlatList 
+             contentContainerStyle={{ paddingBottom: 290 }}
             showsVerticalScrollIndicator={false}
             data={goodsList} 
             renderItem={(item)=> 
@@ -33,7 +34,11 @@ const GoodCard = () => {
                         }}
                         />
                         <Text>{item.item.name}</Text>
+                        <View>
+                        <Text>{item.item.price + 'р'} </Text>
+                        </View>
                 </View>
+                
             }
             numColumns={2}
             columnWrapperStyle={{

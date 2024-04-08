@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
 const SearchFilter = ({icon, placeholder}) => {
+
+    const [isFocused, setIsFocused] = useState(false);
+
     return (
         <View 
         style={{
@@ -19,7 +22,12 @@ const SearchFilter = ({icon, placeholder}) => {
             }}>
 
             <FontAwesome name={icon} size={20} color="pink"/>
-            <TextInput style={{paddingLeft: 8, fontSize: 16, color:"grey"}}>{placeholder}</TextInput>
+            <TextInput 
+            style={{paddingLeft: 8, fontSize: 16, color:"grey"}}
+            placeholder={isFocused ? '' : 'Торт, слойка яблочная, штрудель...'}
+            onFocus={() => setIsFocused(true)}
+            onBlur={() => setIsFocused(false)}
+            ></TextInput>
         </View>
     );
 }

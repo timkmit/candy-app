@@ -47,41 +47,49 @@ export const goodsList = [
     {
         id: "01",
         name: "Кусочек Шоколад",
-        image: cakeImage
+        image: cakeImage,
+        price: 120
     },
     {
         id: "02",
-        name: "кукисы",
-        image: cookiesImage
+        name: "Кукисы",
+        image: cookiesImage,
+        price: 140
     },
     {
         id: "03",
         name: "Панкейк",
-        image: pancakeImage
+        image: pancakeImage,
+        price: 130
     },
     {
         id: "04",
         name: "Панкейк",
-        image: pancake2Image
+        image: pancake2Image,
+        price: 160
     },
     {
         id: "05",
         name: "Панкейк",
-        image: pancake3Image
+        image: pancake3Image,
+        price: 180
     },
     {
         id: "06",
         name: "Панкейк",
-        image: pancakeImage
+        image: pancakeImage,
+        price: 110
     },
     {
         id: "07",
         name: "Правильное питание",
-        image: cakeImage
+        image: cakeImage,
+        price: 220
     },
     {
         id: "08",
         name: "Тирамису",
-        image: tiramisuImage
+        image: tiramisuImage,
+        price: 190
     },
 ]
