@@ -3,16 +3,19 @@ import { FlatList, StyleSheet, View, Text, Image, Pressable } from 'react-native
 import { useNavigation } from '@react-navigation/native'
 import { colors, goodsList } from '../Constant';
 
-const GoodCard = () => {
-
+const GoodCard = ({searchValue}) => {
     const navigation = useNavigation()
+
+    const filteredGoods = goodsList.filter(item => {
+        return item.name.toLowerCase().includes(searchValue.toLowerCase());
+    });
 
     return (
         <View>
             <FlatList 
              contentContainerStyle={{ paddingBottom: 10 }}
             showsVerticalScrollIndicator={false}
-            data={goodsList} 
+            data={filteredGoods} 
             renderItem={(item)=> 
                 <Pressable 
                 onPress={()=> navigation.navigate("goodDetail", {item: item})}

@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import { TextInput, View } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 
-const SearchFilter = ({icon, placeholder}) => {
-
+const SearchFilter = ({icon, placeholder, onSearch}) => {
     const [isFocused, setIsFocused] = useState(false);
+    const [searchText, setSearchText] = useState('');
+
+    const handleSearch = (text) => {
+        setSearchText(text);
+        onSearch(text);
+    }
 
     return (
         <View 
@@ -27,6 +32,8 @@ const SearchFilter = ({icon, placeholder}) => {
             placeholder={isFocused ? '' : 'Торт, слойка яблочная, штрудель...'}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
+            onChangeText={handleSearch}
+            value={searchText}
             ></TextInput>
         </View>
     );
