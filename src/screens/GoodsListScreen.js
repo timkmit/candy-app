@@ -8,8 +8,14 @@ import GoodCard from '../components/GoodCard';
 
 const GoodsListScreen = () => {
     const [searchValue, setSearchValue] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('');
+
     const handleSearch = (value) => {
         setSearchValue(value);
+    }
+
+    const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
     }
 
     return (
@@ -21,14 +27,14 @@ const GoodsListScreen = () => {
                 <Text style={{fontSize: 22, fontWeight: "bold"}}>
                     Категории
                 </Text>
-                <CategoriesList/>
+                <CategoriesList onCategorySelect={handleCategorySelect}/>
             </View>
 
             <View style={{marginTop: 22, flex: 1}}>
                 <Text style={{fontSize: 22, fontWeight: "bold"}}>
                     Товары
                 </Text>
-                <GoodCard searchValue={searchValue}/>
+                <GoodCard searchValue={searchValue} category={selectedCategory}/>
             </View>
         </SafeAreaView>
     );

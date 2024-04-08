@@ -19,27 +19,19 @@ export const categories = [
     },
     {
         id: "02",
-        category: "Слойки"
+        category: "Панкейки"
     },
     {
         id: "03",
-        category: "Пироженые"
+        category: "Печенье"
     },
     {
         id: "04",
-        category: "Чизкейки"
+        category: "Все"
     },
     {
         id: "05",
         category: "Напитки"
-    },
-    {
-        id: "06",
-        category: "Мороженое"
-    },
-    {
-        id: "07",
-        category: "Правильное питание"
     },
 ]
 
@@ -58,7 +50,8 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Торты"
     },
     {
         id: "02",
@@ -74,7 +67,8 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Печенье"
     },
     {
         id: "03",
@@ -90,7 +84,8 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Панкейки"
     },
     {
         id: "04",
@@ -106,7 +101,8 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Панкейки"
     },
     {
         id: "05",
@@ -122,7 +118,8 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Панкейки"
     },
     {
         id: "06",
@@ -138,7 +135,8 @@ export const goodsList = [
                 "Молоко", 
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Панкейки"
     },
     {
         id: "07",
@@ -154,7 +152,8 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Торты"
     },
     {
         id: "08",
@@ -170,6 +169,7 @@ export const goodsList = [
                 "Молоко",  
                 "Сливки",
                 "Ванилин"
-        ]
+        ],
+        category: "Торты"
     },
 ]
