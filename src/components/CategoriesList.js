@@ -10,6 +10,7 @@ const CategoriesList = () => {
                     categories.map((category, index) => {
                         return (
                             <View 
+                            key={index}
                             style={{
                                 backgroundColor: colors.COLOR_PRIMARY, 
                                 marginRight: 36,

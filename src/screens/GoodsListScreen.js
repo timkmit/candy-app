@@ -9,7 +9,7 @@ import GoodCard from '../components/GoodCard';
 const GoodsListScreen = () => {
     return (
         <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
-            <HeaderScreen headerText={"Привет!"} headerIcon={"bell-o"}/>
+            <HeaderScreen headerText={"Рады видеть тебя!"} headerIcon={"bell-o"}/>
             <SearchFilter icon="search" placeholder={"Торт, чизкейк, пирожок, чай..."}/>
 
             <View style={{marginTop: 22}}>
@@ -19,7 +19,7 @@ const GoodsListScreen = () => {
                 <CategoriesList/>
             </View>
 
-            <View style={{marginTop: 22}}>
+            <View style={{marginTop: 22, flex: 1}}>
                 <Text style={{fontSize: 22, fontWeight: "bold"}}>
                     Товары
                 </Text>

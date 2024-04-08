@@ -1,16 +1,21 @@
 import React from 'react';
-import { FlatList, StyleSheet, View, Text, Image } from 'react-native';
+import { FlatList, StyleSheet, View, Text, Image, Pressable } from 'react-native';
+import { useNavigation } from '@react-navigation/native'
 import { colors, goodsList } from '../Constant';
 
 const GoodCard = () => {
+
+    const navigation = useNavigation()
+
     return (
         <View>
             <FlatList 
-             contentContainerStyle={{ paddingBottom: 290 }}
+             contentContainerStyle={{ paddingBottom: 10 }}
             showsVerticalScrollIndicator={false}
             data={goodsList} 
             renderItem={(item)=> 
-                <View 
+                <Pressable 
+                onPress={()=> navigation.navigate("goodDetail", {item: item})}
                 style={{
                     backgroundColor: colors.COLOR_LIGHT,
                     shadowColor:"#000",
@@ -29,7 +34,7 @@ const GoodCard = () => {
                         <Image source={item.item.image}
                         style={{
                             width: 162,
-                            height: 150,
+                            height: 160,
                             resizeMode: "center"
                         }}
                         />
@@ -37,7 +42,7 @@ const GoodCard = () => {
                         <View>
                         <Text>{item.item.price + 'р'} </Text>
                         </View>
-                </View>
+                </Pressable>
                 
             }
             numColumns={2}
