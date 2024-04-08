@@ -4,6 +4,7 @@ import { StyleSheet, View, Text, SafeAreaView } from 'react-native';
 import HeaderScreen from '../components/Header';
 import SearchFilter from '../components/SearchFilter';
 import CategoriesList from '../components/CategoriesList';
+import GoodCard from '../components/GoodCard';
 
 const GoodsListScreen = () => {
     return (
@@ -11,11 +12,18 @@ const GoodsListScreen = () => {
             <HeaderScreen headerText={"Привет!"} headerIcon={"bell-o"}/>
             <SearchFilter icon="search" placeholder={"Торт, чизкейк, пирожок, чай..."}/>
 
-            <View>
+            <View style={{marginTop: 22}}>
                 <Text style={{fontSize: 22, fontWeight: "bold"}}>
                     Категории
                 </Text>
                 <CategoriesList/>
+            </View>
+
+            <View style={{marginTop: 22}}>
+                <Text style={{fontSize: 22, fontWeight: "bold"}}>
+                    Товары
+                </Text>
+                <GoodCard/>
             </View>
         </SafeAreaView>
             
