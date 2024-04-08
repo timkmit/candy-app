@@ -8,7 +8,7 @@ const GoodsListScreen = () => {
     return (
         <SafeAreaView style={{flex: 1, marginHorizontal: 16}}>
             <HeaderScreen headerText={"Привет!"} headerIcon={"bell-o"}/>
-            <SearchFilter icon="search" placeholder={"Введите название изделия"}/>
+            <SearchFilter icon="search" placeholder={"Торт, чизкейк, пирожок, чай..."}/>
         </SafeAreaView>
             
         

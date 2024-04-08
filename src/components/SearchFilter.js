@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { TextInput, View } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 const SearchFilter = ({icon, placeholder}) => {
     return (
@@ -16,7 +17,9 @@ const SearchFilter = ({icon, placeholder}) => {
             shadowOpacity: 0.1,
             shadowRadius: 7
             }}>
-            <Text>search</Text>
+
+            <FontAwesome name={icon} size={20} color="pink"/>
+            <TextInput style={{paddingLeft: 8, fontSize: 16, color:"grey"}}>{placeholder}</TextInput>
         </View>
     );
 }
